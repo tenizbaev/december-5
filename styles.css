@@ -1,22 +1,46 @@
-#start-animation{
+#start-animation {
     margin: 200px auto 0;
     display: block;
     width: 150px;
     height: 150px;
     text-align: center;
-    color: aliceblue;
+    color: white;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     line-height: 150px;
     border-radius: 100%;
     background-color: rgb(80, 164, 212);
-    box-shadow: 0 0 10px rgb(105, 105, 105);
-};
-#start-animation:hover{
-    transform: scale(1.2,1.2);
+    box-shadow: 0 0 40px rgb(105, 105, 105);
+    animation: hoverOut 1s;
+  }
+  #start-animation:hover {
     background-color: rgb(223, 108, 73);
-}
-
-
-
+    animation: hoverIn 1s forwards;
+  }
+  
+  @keyframes hoverIn {
+    0%   {
+      transform: scale(1, 1);
+      background-color: rgb(80, 164, 212);
+      box-shadow: 0 0 40px rgb(105, 105, 105);
+    }
+    100% {
+      transform: scale(1.2, 1.2);
+      background-color: rgb(223, 108, 73);
+      box-shadow: 0 0 10px rgb(105, 105, 105);
+    }
+  }
+  
+  @keyframes hoverOut {
+    0%   {
+      transform: scale(1.2, 1.2);
+      background-color: rgb(223, 108, 73);
+      box-shadow: 0 0 10px rgb(105, 105, 105);
+    }
+    100% {
+      transform: scale(1, 1);
+      background-color: rgb(80, 164, 212);
+      box-shadow: 0 0 40px rgb(105, 105, 105);
+    }
+  }
